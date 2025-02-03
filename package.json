@@ -1,0 +1,25 @@
+{
+  "name": "book-directory-nodejs",
+  "version": "1.0.0",
+  "description": "A place to store book already, my own review on them and summary. Focus one place, simple and elegant solution",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon App.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/knguyennt/book-directory-nodejs.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/knguyennt/book-directory-nodejs/issues"
+  },
+  "homepage": "https://github.com/knguyennt/book-directory-nodejs#readme",
+  "dependencies": {
+    "express": "^4.21.2",
+    "nodemon": "^3.1.9"
+  }
+}
