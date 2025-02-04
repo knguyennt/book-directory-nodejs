@@ -60,6 +60,7 @@
     }
 
     .content-container {
+        overflow: scroll;
         position: relative;
         width: 90%;
         height: 720px;
