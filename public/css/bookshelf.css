@@ -78,6 +78,10 @@
         .card {
             min-width: 242px;
             max-height: 350px;
+
+            img {
+                max-height: 200px;
+            }
         }
     }
 }

@@ -1,10 +1,44 @@
 import { Router } from "express";
-import path from "path";
 
 const router = Router()
 
+const bookData = {
+    data: [
+        {
+            title: "Book 1",
+            image: "/public/images/book.webp",
+            description: "Lorem Ispum"
+        },
+        {
+            title: "Book 2",
+            image: "/public/images/book.webp",
+            description: "Lorem Ispum"
+        },
+        {
+            title: "Book 3",
+            image: "/public/images/book.webp",
+            description: "Lorem Ispum"
+        },
+        {
+            title: "Book 4",
+            image: "/public/images/book.webp",
+            description: "Lorem Ispum"
+        },
+        {
+            title: "Book 5",
+            image: "/public/images/book.webp",
+            description: "Lorem Ispum"
+        },
+        {
+            title: "Book 6",
+            image: "/public/images/book.webp",
+            description: "Lorem Ispum"
+        },
+    ]
+}
+
 router.get('/', (req, res) => {
-    res.sendFile(path.join(import.meta.dirname, "..", "views/bookshelf.html"))
+    res.render('bookshelf', { bookData: bookData.data })
 })
 
 router.get('/:id', (req, res) => {
