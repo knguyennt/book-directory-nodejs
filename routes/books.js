@@ -1,4 +1,5 @@
 import { Router } from "express";
+import bookController from "../models/books.js"
 
 const router = Router()
 
@@ -38,6 +39,8 @@ const bookData = {
 }
 
 router.get('/', (req, res) => {
+    const book = new bookController("Haha")
+    book.addBook();
     res.render('bookshelf', { bookData: bookData.data })
 })
 

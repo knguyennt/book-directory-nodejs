@@ -1,0 +1,34 @@
+{
+  "data": [
+    {
+      "title": "Book 1",
+      "image": "/public/images/book.webp",
+      "description": "Lorem Ispum"
+    },
+    {
+      "title": "Book 2",
+      "image": "/public/images/book.webp",
+      "description": "Lorem Ispum"
+    },
+    {
+      "title": "Book 3",
+      "image": "/public/images/book.webp",
+      "description": "Lorem Ispum"
+    },
+    {
+      "title": "Book 4",
+      "image": "/public/images/book.webp",
+      "description": "Lorem Ispum"
+    },
+    {
+      "title": "Book 5",
+      "image": "/public/images/book.webp",
+      "description": "Lorem Ispum"
+    },
+    {
+      "title": "Book 6",
+      "image": "/public/images/book.webp",
+      "description": "Lorem Ispum"
+    }
+  ]
+}
