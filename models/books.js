@@ -1,23 +1,24 @@
 
-import { readFile } from "../utils/fileUtils.js"
+import { DATA_FILE_PATH } from "../consts/fileConsts.js";
+import { readFile, writeFile } from "../utils/fileUtils.js"
 
 class Books {
-    constructor (bookName) {
-        this.name = bookName
+    constructor (title, description='', image='') {
+        this.title = title
+        this.image = image ? image : "/public/images/book.webp"
+        this.description = description ? description : "Lorem ispum"
     }
 
     addBook () {
-        let books = []
-        readFile("/Users/nguyennguyen/workspace/web-development/book-directory-nodejs/data/books.json", (bookData) => {
-            const jsonData = JSON.parse(bookData);
-            books = jsonData.data;
-            books.push( { ...this }) 
-            console.log(books)
+        readFile(DATA_FILE_PATH, (books) => {
+            const { data: bookData } = JSON.parse(books)
+            bookData.push({ ...this });
+            writeFile(DATA_FILE_PATH, JSON.stringify({ data: bookData }))
         })
     }
 
-    static fetchAll () {
-
+    static fetchAll (callback) {
+        readFile(DATA_FILE_PATH, callback)
     }
 }
 
