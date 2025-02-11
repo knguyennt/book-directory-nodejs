@@ -4,6 +4,7 @@
     <%- include('partials/header.ejs') %>
     <title>Collection</title>
     <link rel="stylesheet" href="/public/css/bookshelf.css" />
+    <script src="/public/scripts/bookshelf.js"></script>
 </head>
 <body>
     <!--------------------------------------------  Navbar here  --------------------------------->
@@ -30,7 +31,11 @@
                         <div class="card-body">
                             <h5 class="card-title"><%= book.title %></h5>
                             <p class="card-text"><%= book.description %></p>
-                            <a href="#" class="btn btn-primary">Go somewhere</a>
+                            <div class="product-button-row">
+                                <a href="#" class="btn btn-primary">Details</a>
+                                <button class="btn btn-primary" type="submit">Edit</button>
+                                <button class="btn btn-danger" type="submit">Delete</button>
+                            </div>
                         </div>
                     </div>
                 <% } %>
