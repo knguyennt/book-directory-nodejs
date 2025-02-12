@@ -9,7 +9,7 @@ router.get('/add', addBookPage)
 
 router.post('/add', addBook)
 
-router.get('/:id')
+router.get('/details/:id')
 
 
 

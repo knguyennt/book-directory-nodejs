@@ -19,3 +19,6 @@ export const addBook = (req, res) => {
 
     return res.render('add-book')
 }
+
+export const bookDetails = (req, res) => {
+}
