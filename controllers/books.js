@@ -7,7 +7,7 @@ export const getBooks = (req, res, next) => {
     })
 }
 
-export const addBookPage = (req, res, next) => {
+export const renderAddBookForm = (req, res, next) => {
     return res.render('add-book')
 }
 
@@ -21,4 +21,11 @@ export const addBook = (req, res) => {
 }
 
 export const bookDetails = (req, res) => {
+}
+
+export const deleteBook = (req, res) => {
+    const id = req.params.id
+    Books.delete(id, (bookData) => {
+        return res.render("bookshelf", { bookData })
+    })
 }

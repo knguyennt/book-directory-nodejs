@@ -17,8 +17,8 @@ app.use('/js', express.static('./node_modules/bootstrap/dist/js'));
 
 app.use('/books', bookRouter)
 
-app.get("*", (req, res) => {
-    return res.render('404')
+app.get((req, res) => {
+    return res.status(404).render('404')
 })
 
 app.listen(3000);

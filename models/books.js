@@ -1,6 +1,7 @@
 
 import { DATA_FILE_PATH } from "../consts/fileConsts.js";
 import { readFile, writeFile } from "../utils/fileUtils.js"
+import { hasDuplicateValues } from "../utils/validation.js"
 
 class Books {
     constructor (title, description='', image='') {
@@ -12,13 +13,32 @@ class Books {
     addBook () {
         readFile(DATA_FILE_PATH, (books) => {
             const { data: bookData } = JSON.parse(books)
-            bookData.push({ ...this });
+            let id = Math.floor(Math.random() * 10000);
+
+            while (hasDuplicateValues(bookData, "id", id)) {
+                id = Math.floor(Math.random() * 10000);
+            }
+            bookData.push({ ...this, id });
             writeFile(DATA_FILE_PATH, JSON.stringify({ data: bookData }))
         })
     }
 
     static fetchAll (callback) {
         readFile(DATA_FILE_PATH, callback)
+    }
+
+    static delete (id, callback) {
+        readFile(DATA_FILE_PATH, (books) => {
+            const { data: bookData } = JSON.parse(books)
+
+            const updatedCollection = bookData.filter((book) => book.id != id)
+
+            writeFile(DATA_FILE_PATH, JSON.stringify({data: updatedCollection}))
+
+            callback(updatedCollection)
+        })
+
+
     }
 }
 
