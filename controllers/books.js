@@ -29,3 +29,12 @@ export const deleteBook = (req, res) => {
         return res.render("bookshelf", { bookData })
     })
 }
+
+export const renderEditBookForm = (req, res) => {
+    const id = req.params.id
+    Books.fetchAll((books) => {
+        const { data: bookData } = JSON.parse(books)
+        const editBook = bookData.find(book => book.id == id)
+        res.render("add-book", { editBook })
+    })
+}
