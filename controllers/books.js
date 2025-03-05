@@ -8,7 +8,7 @@ export const getBooks = (req, res, next) => {
 }
 
 export const renderAddBookForm = (req, res, next) => {
-    return res.render('add-book')
+    return res.render('add-book', { book: {} })
 }
 
 export const addBook = (req, res) => {
@@ -34,7 +34,7 @@ export const renderEditBookForm = (req, res) => {
     const id = req.params.id
     Books.fetchAll((books) => {
         const { data: bookData } = JSON.parse(books)
-        const editBook = bookData.find(book => book.id == id)
-        res.render("add-book", { editBook })
+        const book = bookData.find(book => book.id == id)
+        res.render("add-book", { book })
     })
 }
