@@ -47,7 +47,7 @@
 
     .card {
         min-width: 242px;
-        max-height: 350px;
+        max-height: 400px;
     }
 }
 
@@ -77,7 +77,7 @@
 
         .card {
             min-width: 242px;
-            max-height: 350px;
+            max-height: 400px;
 
             img {
                 max-height: 200px;
@@ -86,6 +86,7 @@
             .product-button-row {
                 display: flex;
                 align-items: center;
+                flex-wrap: wrap;
                 gap: 8px;
             }
         }
