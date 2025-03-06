@@ -16,6 +16,24 @@
           <button type="submit" class="btn btn-primary">Submit</button>
         </form>
         <form action="/cart" method="POST">
+          <input
+            type="hidden"
+            name="bookTitle"
+            id="bookTitle"
+            value="<%= book?.title  %>"
+          />
+          <input
+            type="hidden"
+            name="bookAuthor"
+            id="bookAuthor"
+            value="<%= book?.description  %>"
+          />
+          <input
+            type="hidden"
+            name="bookAuthor"
+            id="bookAuthor"
+            value="<%= book?.image  %>"
+          />
           <button class="btn btn-success add-to-cart-button" type="submit">
             Add to Cart
           </button>
