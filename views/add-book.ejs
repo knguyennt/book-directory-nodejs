@@ -11,7 +11,7 @@
 
     <div class="card">
       <div class="card-body">
-        <form method="POST" action="/books/add">
+        <form method="POST" action="<%= book ? '/books/edit/' + book.id : '/books/add' %>">
           <%- include('partials/book-form.ejs') %>
           <button type="submit" class="btn btn-primary">Submit</button>
         </form>

@@ -37,3 +37,11 @@ export const renderEditBookForm = (req, res) => {
     res.render('add-book', { book });
   });
 };
+
+export const editBook = (req, res) => {
+  const id = req.params.id;
+  const body = { ...req.body };
+  Books.update(id, { ...body }, (book) => {
+    res.render('add-book', { book });
+  });
+};

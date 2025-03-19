@@ -1,1 +1,40 @@
-{"data":[{"id":3,"title":"test","image":"/public/images/book.webp","description":"dasdsad"},{"title":"dad","image":"/public/images/book.webp","description":"dsadsa","id":0},{"title":"dadadsd","image":"/public/images/book.webp","description":"sadasda","id":5485},{"title":"aaaa","image":"/public/images/book.webp","description":"aaaa","id":3245}]}
+{
+  "data": [
+    {
+      "title": "dade",
+      "image": "/public/images/book.webp",
+      "description": "dsadsa",
+      "id": 0
+    },
+    {
+      "title": "dadadsd",
+      "image": "/public/images/book.webp",
+      "description": "sadasda",
+      "id": 5485
+    },
+    {
+      "title": "aaaa",
+      "image": "/public/images/book.webp",
+      "description": "aaaa",
+      "id": 3245
+    },
+    {
+      "title": "qaw",
+      "image": "/public/images/book.webp",
+      "description": "bbvv",
+      "id": 5198
+    },
+    {
+      "title": "cc",
+      "image": "/public/images/book.webp",
+      "description": "bbvv",
+      "id": 6494
+    },
+    {
+      "title": "cc",
+      "image": "/public/images/book.webp",
+      "description": "bbvv",
+      "id": 3630
+    }
+  ]
+}
