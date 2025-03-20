@@ -3,22 +3,17 @@
 <head>
     <%- include('partials/header.ejs') %>
     <title>Collection</title>
-    <link rel="stylesheet" href="/public/css/bookshelf.css" />
+    <link rel="stylesheet" href="/public/css/carts.css" />
 </head>
 <body>
     <!--------------------------------------------  Navbar here  --------------------------------->
     <%- include('partials/header-nav.ejs'); %>
 
     <div class="content">
-
-        <div class="image-background">
-            <div class="background-cover"></div>
-            <img class="background-image-shelf" src="/public/images/shelf.jpg" />
-        </div>
         
         <!--------------------- Header Container ------------------------------>
         <div class="header-contaier">
-            <div class="title">Collection</div>
+            <div class="title">Carts</div>
         </div>
 
         <!--------------------- Content Container ------------------------------>
@@ -32,7 +27,6 @@
                             <p class="card-text"><%= book.description %></p>
                             <div class="product-button-row">
                                 <a href="#" class="btn btn-primary">Details</a>
-                                <button class="btn btn-primary edit-button" type="submit" onclick="window.location='/books/edit/<%= book.id %>'">Edit</button>
                                 <form action="/books/delete/<%= book.id %>" method="POST">
                                     <button class="btn btn-danger delete-button" type="submit">Delete</button>
                                 </form>
